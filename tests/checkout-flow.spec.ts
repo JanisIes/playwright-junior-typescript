@@ -2,7 +2,7 @@ import test from "../fixtures/pages";
 
 test.describe("Test checkout flow", async () => {
 
-    test("Add item to cart, checkout and make a successfull purchase", async ({ homePage, loginPage, productsPage, cartPage, checkoutPage, paymentPage }) => {
+    test("Add item to cart, checkout and make a successfull purchase", async ({ homePage, productsPage, cartPage, checkoutPage, paymentPage }) => {
         await homePage.handleConsentPopup()
         await homePage.handleGoogleVignettePopup()
 

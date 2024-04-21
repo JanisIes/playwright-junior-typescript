@@ -8,6 +8,9 @@ setup("Sign in with email", async ({ page }) => {
     const homePage = new HomePage(page);
     const loginPage = new LoginPage(page);
 
+    await loginPage.handleConsentPopup()
+    await loginPage.handleGoogleVignettePopup()
+
     await loginPage.navigateToPage("/login")
     await loginPage.inputLoginData("user1@email.com", "password1")
     await loginPage.clickLoginButton()
