@@ -1,6 +1,8 @@
 import { expect } from '@playwright/test';
 import test from "../fixtures/pages";
 
+test.use({ storageState: { cookies: [], origins: [] } });
+
 test.describe("Add item to cart and assert if the price is correct", async () => {
 
     test('Test generated with codegen', async ({ page }) => {

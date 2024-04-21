@@ -24,7 +24,7 @@ export default class ProductsPage extends BasePage {
   async getProductPrice(productName: string) {
     return await this.page.locator(`.productinfo h2:above(:has-text("${productName}"))`).first().textContent()
   }
- 
+
   async viewCart() {
     await this.viewCartLink.click()
   }

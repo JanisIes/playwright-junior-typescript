@@ -26,7 +26,7 @@ export default class BasePage {
   async handleConsentPopup() {
     await this.page.addLocatorHandler(
       this.page.getByText("This site asks for consent to use your data"),
-      async() => {
+      async () => {
         await this.page.locator('button:has-text("Consent")').click();
       }
     )
@@ -35,7 +35,7 @@ export default class BasePage {
   async handleGoogleVignettePopup() {
     await this.page.addLocatorHandler(
       this.page.locator("#ad_position_box"),
-      async() => {
+      async () => {
         await this.page.getByLabel("Close ad").click();
       }
     )

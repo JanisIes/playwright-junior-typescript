@@ -6,11 +6,6 @@ test.describe("Test checkout flow", async () => {
         await homePage.handleConsentPopup()
         await homePage.handleGoogleVignettePopup()
 
-
-        await loginPage.navigateToPage("/login")
-        await loginPage.inputLoginData("user1@email.com", "password1")
-        await loginPage.clickLoginButton()
-
         await productsPage.navigateToPage("/products")
         await productsPage.addProductToCart("Men Tshirt")
         await productsPage.viewCart()
